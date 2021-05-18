@@ -2,7 +2,7 @@
 
 <addon id="script.service.alarmclock" name="XBMC Alarm clock" version="0.0.45" provider-name="remigius">
   <requires>
-    <import addon="xbmc.python" version="3.9.4"/>
+    <import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides>executable</provides>
