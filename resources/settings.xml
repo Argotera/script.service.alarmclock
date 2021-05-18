@@ -2,7 +2,7 @@
 <settings version="1">
 	<section id="script.service.alarmclock">
 		<category id="general" label="30001" help="">
- 			<group id="1" label="omorfa">
+ 			<group id="1" label="Al1">
         <setting id="alarm1" type="boolean" label="30014" help="">
           <level>0</level>
           <default>false</default>
@@ -112,7 +112,7 @@
           </control>
         </setting>
 			</group>
- 			<group id="2" label="omorfa2">
+ 			<group id="2" label="Al2">
         <setting id="alarm2" type="boolean" label="30014" help="">
           <level>0</level>
           <default>false</default>
@@ -210,6 +210,336 @@
           <control type="toggle"/>
         </setting>
         <setting id="duration2" type="integer" label="30019" help="">
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>01</minimum>
+            <step>5</step>
+            <maximum>120</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+			</group>
+ 			<group id="3" label="Al3">
+        <setting id="alarm3" type="boolean" label="30014" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="hour3" type="integer" label="32010" help="">
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>23</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="minute3" type="integer" label="32011" help="">
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="Day3" type="enum" label="30012" help="">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30020">0</option>
+              <option label="30021">1</option>
+              <option label="30022">2</option>
+              <option label="30023">3</option>
+              <option label="30024">4</option>
+              <option label="30025">5</option>
+              <option label="30026">6</option>
+              <option label="30027">7</option>
+              <option label="30028">8</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="Action3" type="enum" label="30015" help="">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30016">0</option>
+              <option label="30017">1</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="file3" type="path" label="30013" help="">
+          <level>0</level>
+          <default/>
+          <constraints>
+            <writable>false</writable>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="file">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="text3" type="string" label="30013" help="">
+          <level>0</level>
+          <default/>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="volume3" type="integer" label="30009" help="">
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>8</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="tunoff3" type="boolean" label="30018" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="duration3" type="integer" label="30019" help="">
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>01</minimum>
+            <step>5</step>
+            <maximum>120</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+			</group>
+ 			<group id="4" label="Al4">
+        <setting id="alarm4" type="boolean" label="30014" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="hour4" type="integer" label="32010" help="">
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>23</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="minute4" type="integer" label="32011" help="">
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="Day4" type="enum" label="30012" help="">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30020">0</option>
+              <option label="30021">1</option>
+              <option label="30022">2</option>
+              <option label="30023">3</option>
+              <option label="30024">4</option>
+              <option label="30025">5</option>
+              <option label="30026">6</option>
+              <option label="30027">7</option>
+              <option label="30028">8</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="Action4" type="enum" label="30015" help="">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30016">0</option>
+              <option label="30017">1</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="file4" type="path" label="30013" help="">
+          <level>0</level>
+          <default/>
+          <constraints>
+            <writable>false</writable>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="file">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="text4" type="string" label="30013" help="">
+          <level>0</level>
+          <default/>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="volume4" type="integer" label="30009" help="">
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>8</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="tunoff4" type="boolean" label="30018" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="duration4" type="integer" label="30019" help="">
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>01</minimum>
+            <step>5</step>
+            <maximum>120</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+			</group>
+ 			<group id="5" label="Al5">
+        <setting id="alarm5" type="boolean" label="30014" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="hour5" type="integer" label="32010" help="">
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>23</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="minute5" type="integer" label="32011" help="">
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="Day5" type="enum" label="30012" help="">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30020">0</option>
+              <option label="30021">1</option>
+              <option label="30022">2</option>
+              <option label="30023">3</option>
+              <option label="30024">4</option>
+              <option label="30025">5</option>
+              <option label="30026">6</option>
+              <option label="30027">7</option>
+              <option label="30028">8</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="Action5" type="enum" label="30015" help="">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30016">0</option>
+              <option label="30017">1</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="file5" type="path" label="30013" help="">
+          <level>0</level>
+          <default/>
+          <constraints>
+            <writable>false</writable>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="file">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="text5" type="string" label="30013" help="">
+          <level>0</level>
+          <default/>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="volume5" type="integer" label="30009" help="">
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>8</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="tunoff5" type="boolean" label="30018" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="duration5" type="integer" label="30019" help="">
           <level>0</level>
           <default>30</default>
           <constraints>
