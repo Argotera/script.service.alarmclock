@@ -50,9 +50,9 @@ class AlarmClock(object):
         are returned in the list."""
         days_of_week = int(self.addon.getSetting("day%d" % number))
         if days_of_week == 7:
-            days_of_week = list(range(5))
+            days_of_week = range(5)
         if days_of_week == 8:
-            days_of_week = list(range(7))
+            days_of_week = range(7)
 
         action = self.addon.getSetting("action%d" % number)
         if action == "0":
