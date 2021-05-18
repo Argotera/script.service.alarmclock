@@ -9,6 +9,12 @@
           <control type="toggle"/>
         </setting>
         <setting id="hour1" type="integer" label="32010" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm1">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm1">true</dependency>
+          </dependencies>
           <level>0</level>
           <default>07</default>
           <constraints>
@@ -21,6 +27,12 @@
           </control>
         </setting>
         <setting id="minute1" type="integer" label="32011" help="">
+          <dependencies>
+          	<dependency type="enable" setting="alarm1">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="visible" setting="alarm1">true</dependency>
+          </dependencies>
           <level>0</level>
           <default>07</default>
           <constraints>
@@ -553,11 +565,5 @@
         </setting>
 			</group>
 		</category>
- 			<group id="1" label="Al6">
-        <setting id="alarm6" type="boolean" label="30014" help="">
-          <level>0</level>
-          <default>false</default>
-          <control type="toggle"/>
-        </setting>
 	</section>
 </settings>
