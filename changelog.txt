@@ -1,4 +1,4 @@
-ti.
+ti.5
 v0.0.43
  - Tries to activate configured HDMI device by using the built-in
    command "CECActivateSource" (thanks go to anonymouzz)
