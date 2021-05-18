@@ -114,7 +114,7 @@
 			</group>
 		</category>
 		<category id="general" label="30002" help="">
-			<group id="2" label="">
+			<group id="1" label="">
 				<setting id="alarm2" type="boolean" label="30014" help="">
           <level>0</level>
 	        <default>false</default>
@@ -226,7 +226,7 @@
 			</group>
 		</category>
 		<category id="general" label="30003" help="">
-			<group id="3" label="">
+			<group id="1" label="">
 				<setting id="alarm3" type="boolean" label="30014" help="">
           <level>0</level>
 	        <default>false</default>
@@ -338,7 +338,7 @@
 			</group>
 		</category>
 		<category id="general" label="30004" help="">
-			<group id="4" label="">
+			<group id="1" label="">
 				<setting id="alarm4" type="boolean" label="30014" help="">
           <level>0</level>
 	        <default>false</default>
@@ -450,7 +450,7 @@
 			</group>
 		</category>
 		<category id="general" label="30005" help="">
-			<group id="5" label="">
+			<group id="1" label="">
 				<setting id="alarm5" type="boolean" label="30014" help="">
           <level>0</level>
 	        <default>false</default>
