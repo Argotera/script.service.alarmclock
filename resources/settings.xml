@@ -61,3 +61,20 @@
     <setting label="30019" type="slider" id="duration5" default="30" range="5, 5, 120" option="int" enable="eq(-1,true)" />
   </category>
 </settings>
+
+
+
+
+
+<?xml version="1.0" ?>
+<settings version="1">
+	<section id="script.service.alarmclock">
+		<category id="general" label="" help="">
+			<group id="1" label="">
+				<setting id="" type="" label="" help="">
+					<control type="" format=""/>
+				</setting>
+			</group>
+		</category>
+	</section>
+</settings>
