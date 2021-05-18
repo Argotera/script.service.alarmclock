@@ -553,5 +553,11 @@
         </setting>
 			</group>
 		</category>
+ 			<group id="1" label="Al6">
+        <setting id="alarm6" type="boolean" label="30014" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
 	</section>
 </settings>
