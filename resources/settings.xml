@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <settings version="1">
 	<section id="script.service.alarmclock">
-		<category id="general" label="30001" help="">
- 			<group id="1" label="Al1">
+		<category id="general1" label="30001" help="">
+ 			<group id="1" label="">
         <setting id="alarm1" type="boolean" label="30014" help="">
           <level>0</level>
           <default>false</default>
           <control type="toggle"/>
         </setting>
-        <setting id="hour1" type="integer" label="32010" help="">
+        <setting id="hour1" type="integer" label="30010" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm1">true</dependency>
           </dependencies>
@@ -26,7 +26,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="minute1" type="integer" label="32011" help="">
+        <setting id="minute1" type="integer" label="30011" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm1">true</dependency>
           </dependencies>
@@ -44,7 +44,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="Day1" type="enum" label="30012" help="">
+        <setting id="day1" type="integer" label="30012" help="">
           <dependencies>
             <dependency type="visible" setting="alarm1">true</dependency>
           </dependencies>
@@ -68,7 +68,7 @@
           </constraints>
           <control type="spinner" format="string"/>
         </setting>
-        <setting id="Action1" type="enum" label="30015" help="">
+        <setting id="action1" type="integer" label="30015" help="">
           <dependencies>
             <dependency type="visible" setting="alarm1">true</dependency>
           </dependencies>
@@ -87,10 +87,18 @@
         </setting>
         <setting id="file1" type="path" label="30013" help="">
           <dependencies>
-            <dependency type="visible" setting="alarm1">true</dependency>
-          </dependencies>
-          <dependencies>
-            <dependency type="enable" setting="alarm1">true</dependency>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm1">true</condition>
+                <condition setting="action1">0</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm1">true</condition>
+                <condition setting="action1">0</condition>
+              </and>
+            </dependency>
           </dependencies>
           <level>0</level>
           <default/>
@@ -104,10 +112,18 @@
         </setting>
         <setting id="text1" type="string" label="30013" help="">
           <dependencies>
-         	  <dependency type="visible" setting="alarm1">true</dependency>
-          </dependencies>
-          <dependencies>
-          	<dependency type="enable" setting="alarm1">true</dependency>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm1">true</condition>
+                <condition setting="action1">1</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm1">true</condition>
+                <condition setting="action1">1</condition>
+              </and>
+            </dependency>
           </dependencies>
           <level>0</level>
           <default/>
@@ -149,10 +165,10 @@
         </setting>
         <setting id="duration1" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="alarm1">true</dependency>
+          	<dependency type="visible" setting="tunoff1">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="alarm1">true</dependency>
+          	<dependency type="enable" setting="tunoff1">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
@@ -166,13 +182,15 @@
           </control>
         </setting>
 			</group>
- 			<group id="2" label="Al2">
+		</category>
+		<category id="general2" label="30002" help="">
+ 			<group id="1" label="">
         <setting id="alarm2" type="boolean" label="30014" help="">
           <level>0</level>
           <default>false</default>
           <control type="toggle"/>
         </setting>
-        <setting id="hour2" type="integer" label="32010" help="">
+        <setting id="hour2" type="integer" label="30010" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm2">true</dependency>
           </dependencies>
@@ -190,7 +208,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="minute2" type="integer" label="32011" help="">
+        <setting id="minute2" type="integer" label="30011" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm2">true</dependency>
           </dependencies>
@@ -208,7 +226,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="Day2" type="enum" label="30012" help="">
+        <setting id="day2" type="integer" label="30012" help="">
           <dependencies>
             <dependency type="visible" setting="alarm2">true</dependency>
           </dependencies>
@@ -232,7 +250,7 @@
           </constraints>
           <control type="spinner" format="string"/>
         </setting>
-        <setting id="Action2" type="enum" label="30015" help="">
+        <setting id="action2" type="integer" label="30015" help="">
           <dependencies>
             <dependency type="visible" setting="alarm2">true</dependency>
           </dependencies>
@@ -251,10 +269,18 @@
         </setting>
         <setting id="file2" type="path" label="30013" help="">
           <dependencies>
-            <dependency type="visible" setting="alarm2">true</dependency>
-          </dependencies>
-          <dependencies>
-            <dependency type="enable" setting="alarm2">true</dependency>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm2">true</condition>
+                <condition setting="action2">0</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm2">true</condition>
+                <condition setting="action2">0</condition>
+              </and>
+            </dependency>
           </dependencies>
           <level>0</level>
           <default/>
@@ -268,10 +294,18 @@
         </setting>
         <setting id="text2" type="string" label="30013" help="">
           <dependencies>
-         	  <dependency type="visible" setting="alarm2">true</dependency>
-          </dependencies>
-          <dependencies>
-          	<dependency type="enable" setting="alarm2">true</dependency>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm2">true</condition>
+                <condition setting="action2">1</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm2">true</condition>
+                <condition setting="action2">1</condition>
+              </and>
+            </dependency>
           </dependencies>
           <level>0</level>
           <default/>
@@ -313,10 +347,556 @@
         </setting>
         <setting id="duration2" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="alarm2">true</dependency>
+          	<dependency type="visible" setting="tunoff1">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="alarm2">true</dependency>
+          	<dependency type="enable" setting="tunoff1">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>01</minimum>
+            <step>5</step>
+            <maximum>120</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+			</group>
+		</category>
+		<category id="general3" label="30003" help="">
+ 			<group id="1" label="">
+        <setting id="alarm3" type="boolean" label="30014" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="hour3" type="integer" label="30010" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm3">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm3">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>23</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="minute3" type="integer" label="30011" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm3">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm3">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="day3" type="integer" label="30012" help="">
+          <dependencies>
+            <dependency type="visible" setting="alarm3">true</dependency>
+          </dependencies>
+          <dependencies>
+            <dependency type="enable" setting="alarm3">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30020">0</option>
+              <option label="30021">1</option>
+              <option label="30022">2</option>
+              <option label="30023">3</option>
+              <option label="30024">4</option>
+              <option label="30025">5</option>
+              <option label="30026">6</option>
+              <option label="30027">7</option>
+              <option label="30028">8</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="action3" type="integer" label="30015" help="">
+          <dependencies>
+            <dependency type="visible" setting="alarm3">true</dependency>
+          </dependencies>
+          <dependencies>
+            <dependency type="enable" setting="alarm3">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30016">0</option>
+              <option label="30017">1</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="file3" type="path" label="30013" help="">
+          <dependencies>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm3">true</condition>
+                <condition setting="action3">0</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm3">true</condition>
+                <condition setting="action3">0</condition>
+              </and>
+            </dependency>
+          </dependencies>
+          <level>0</level>
+          <default/>
+          <constraints>
+            <writable>false</writable>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="file">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="text3" type="string" label="30013" help="">
+          <dependencies>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm3">true</condition>
+                <condition setting="action3">1</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm3">true</condition>
+                <condition setting="action3">1</condition>
+              </and>
+            </dependency>
+          </dependencies>
+          <level>0</level>
+          <default/>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="volume3" type="integer" label="30009" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm3">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm3">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>8</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="tunoff3" type="boolean" label="30018" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm3">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm3">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="duration3" type="integer" label="30019" help="">
+          <dependencies>
+          	<dependency type="visible" setting="tunoff1">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="tunoff1">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>01</minimum>
+            <step>5</step>
+            <maximum>120</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+			</group>
+		</category>
+		<category id="general4" label="30004" help="">
+ 			<group id="1" label="">
+        <setting id="alarm4" type="boolean" label="30014" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="hour4" type="integer" label="30010" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm4">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm4">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>23</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="minute4" type="integer" label="30011" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm4">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm4">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="day4" type="integer" label="30012" help="">
+          <dependencies>
+            <dependency type="visible" setting="alarm4">true</dependency>
+          </dependencies>
+          <dependencies>
+            <dependency type="enable" setting="alarm4">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30020">0</option>
+              <option label="30021">1</option>
+              <option label="30022">2</option>
+              <option label="30023">3</option>
+              <option label="30024">4</option>
+              <option label="30025">5</option>
+              <option label="30026">6</option>
+              <option label="30027">7</option>
+              <option label="30028">8</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="action4" type="integer" label="30015" help="">
+          <dependencies>
+            <dependency type="visible" setting="alarm4">true</dependency>
+          </dependencies>
+          <dependencies>
+            <dependency type="enable" setting="alarm4">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30016">0</option>
+              <option label="30017">1</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="file4" type="path" label="30013" help="">
+          <dependencies>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm4">true</condition>
+                <condition setting="action4">0</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm4">true</condition>
+                <condition setting="action4">0</condition>
+              </and>
+            </dependency>
+          </dependencies>
+          <level>0</level>
+          <default/>
+          <constraints>
+            <writable>false</writable>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="file">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="text4" type="string" label="30013" help="">
+          <dependencies>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm4">true</condition>
+                <condition setting="action4">1</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm4">true</condition>
+                <condition setting="action4">1</condition>
+              </and>
+            </dependency>
+          </dependencies>
+          <level>0</level>
+          <default/>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="volume4" type="integer" label="30009" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm4">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm4">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>8</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="tunoff4" type="boolean" label="30018" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm4">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm4">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="duration4" type="integer" label="30019" help="">
+          <dependencies>
+          	<dependency type="visible" setting="tunoff1">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="tunoff1">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>01</minimum>
+            <step>5</step>
+            <maximum>120</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+			</group>
+		</category>
+		<category id="general5" label="30005" help="">
+ 			<group id="1" label="">
+        <setting id="alarm5" type="boolean" label="30014" help="">
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="hour5" type="integer" label="30010" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm5">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm5">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>23</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="minute5" type="integer" label="30011" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm5">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm5">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>07</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="day5" type="integer" label="30012" help="">
+          <dependencies>
+            <dependency type="visible" setting="alarm5">true</dependency>
+          </dependencies>
+          <dependencies>
+            <dependency type="enable" setting="alarm5">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30020">0</option>
+              <option label="30021">1</option>
+              <option label="30022">2</option>
+              <option label="30023">3</option>
+              <option label="30024">4</option>
+              <option label="30025">5</option>
+              <option label="30026">6</option>
+              <option label="30027">7</option>
+              <option label="30028">8</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="action5" type="integer" label="30015" help="">
+          <dependencies>
+            <dependency type="visible" setting="alarm5">true</dependency>
+          </dependencies>
+          <dependencies>
+            <dependency type="enable" setting="alarm5">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="30016">0</option>
+              <option label="30017">1</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string"/>
+        </setting>
+        <setting id="file5" type="path" label="30013" help="">
+          <dependencies>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm5">true</condition>
+                <condition setting="action5">0</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm5">true</condition>
+                <condition setting="action5">0</condition>
+              </and>
+            </dependency>
+          </dependencies>
+          <level>0</level>
+          <default/>
+          <constraints>
+            <writable>false</writable>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="file">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="text5" type="string" label="30013" help="">
+          <dependencies>
+            <dependency type="enable">
+              <and>
+                <condition setting="alarm5">true</condition>
+                <condition setting="action5">1</condition>
+              </and>
+            </dependency>
+            <dependency type="visible">
+              <and>
+                <condition setting="alarm5">true</condition>
+                <condition setting="action5">1</condition>
+              </and>
+            </dependency>
+          </dependencies>
+          <level>0</level>
+          <default/>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>30013</heading>
+          </control>
+        </setting>
+        <setting id="volume5" type="integer" label="30009" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm5">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm5">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>30</default>
+          <constraints>
+            <minimum>00</minimum>
+            <step>8</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="tunoff5" type="boolean" label="30018" help="">
+          <dependencies>
+          	<dependency type="visible" setting="alarm5">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="alarm5">true</dependency>
+          </dependencies>
+          <level>0</level>
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="duration5" type="integer" label="30019" help="">
+          <dependencies>
+          	<dependency type="visible" setting="tunoff5">true</dependency>
+          </dependencies>
+          <dependencies>
+          	<dependency type="enable" setting="tunoff5">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
