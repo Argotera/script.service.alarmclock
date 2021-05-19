@@ -152,7 +152,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="tunoff1" type="boolean" label="30018" help="">
+        <setting id="turnoff1" type="boolean" label="30018" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm1">true</dependency>
           </dependencies>
@@ -165,10 +165,10 @@
         </setting>
         <setting id="duration1" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff1">true</dependency>
+          	<dependency type="visible" setting="turnoff1">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff1">true</dependency>
+          	<dependency type="enable" setting="turnoff1">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
@@ -334,7 +334,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="tunoff2" type="boolean" label="30018" help="">
+        <setting id="turnoff2" type="boolean" label="30018" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm2">true</dependency>
           </dependencies>
@@ -347,10 +347,10 @@
         </setting>
         <setting id="duration2" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff2">true</dependency>
+          	<dependency type="visible" setting="turnoff2">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff2">true</dependency>
+          	<dependency type="enable" setting="turnoff2">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
@@ -516,7 +516,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="tunoff3" type="boolean" label="30018" help="">
+        <setting id="turnoff3" type="boolean" label="30018" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm3">true</dependency>
           </dependencies>
@@ -529,10 +529,10 @@
         </setting>
         <setting id="duration3" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff3">true</dependency>
+          	<dependency type="visible" setting="turnoff3">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff3">true</dependency>
+          	<dependency type="enable" setting="turnoff3">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
@@ -698,7 +698,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="tunoff4" type="boolean" label="30018" help="">
+        <setting id="turnoff4" type="boolean" label="30018" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm4">true</dependency>
           </dependencies>
@@ -711,10 +711,10 @@
         </setting>
         <setting id="duration4" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff4">true</dependency>
+          	<dependency type="visible" setting="turnoff4">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff4">true</dependency>
+          	<dependency type="enable" setting="turnoff4">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
@@ -880,7 +880,7 @@
             <popup>false</popup>
           </control>
         </setting>
-        <setting id="tunoff5" type="boolean" label="30018" help="">
+        <setting id="turnoff5" type="boolean" label="30018" help="">
           <dependencies>
           	<dependency type="visible" setting="alarm5">true</dependency>
           </dependencies>
@@ -893,10 +893,10 @@
         </setting>
         <setting id="duration5" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff5">true</dependency>
+          	<dependency type="visible" setting="turnoff5">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff5">true</dependency>
+          	<dependency type="enable" setting="turnoff5">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
