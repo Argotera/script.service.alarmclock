@@ -27,7 +27,7 @@ class CronTab(object):
         """Starts to check every minute, if the registered jobs should run."""
         cron_time_tuple = datetime(*datetime.now().timetuple()[:5])
         while self.__enabled:
-            if self.xbmc and not self.xbmc.abortRequested:
+            if self.xbmc and not self.xbmc.Monitor().abortRequested:
                 for job in self.jobs:
                     self.xbmc.log("checking job %s against %s" %
                                   (str(job), str(cron_time_tuple)),
