@@ -1,14 +1,15 @@
 """Startup script for the Kodi alarm clock add-on."""
 # pylint: disable=import-error
 import xbmc
+import xbmcvfs
 import xbmcaddon
 import os
 import sys
 
 __cwd__ = xbmc.translatePath(
-    xbmcaddon.Addon().getAddonInfo('path')).decode("utf-8")
-__resource__ = xbmc.translatePath(
-    os.path.join(__cwd__, 'resources', 'lib')).decode("utf-8")
+    xbmcaddon.Addon().getAddonInfo('path'))
+__resource__ = xbmcvfs.translatePath(
+    os.path.join(__cwd__, 'resources', 'lib'))
 sys.path.append(__resource__)
 from cronjobs import CronTab, Job
 

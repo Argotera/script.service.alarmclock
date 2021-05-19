@@ -347,10 +347,10 @@
         </setting>
         <setting id="duration2" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff1">true</dependency>
+          	<dependency type="visible" setting="tunoff2">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff1">true</dependency>
+          	<dependency type="enable" setting="tunoff2">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
@@ -529,10 +529,10 @@
         </setting>
         <setting id="duration3" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff1">true</dependency>
+          	<dependency type="visible" setting="tunoff3">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff1">true</dependency>
+          	<dependency type="enable" setting="tunoff3">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
@@ -711,10 +711,10 @@
         </setting>
         <setting id="duration4" type="integer" label="30019" help="">
           <dependencies>
-          	<dependency type="visible" setting="tunoff1">true</dependency>
+          	<dependency type="visible" setting="tunoff4">true</dependency>
           </dependencies>
           <dependencies>
-          	<dependency type="enable" setting="tunoff1">true</dependency>
+          	<dependency type="enable" setting="tunoff4">true</dependency>
           </dependencies>
           <level>0</level>
           <default>30</default>
